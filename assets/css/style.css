@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0A1128;
+    --white-color: #FFFFFF;
+    --light-gray-color: #EEEEEE;
+    --secondary-color: crimson;
+    --gap: 3rem;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+.white-bg {
+    background: var(--white-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: fixed;
+    /*the properties below are to use flexbox container in navbar and set position fixed to the navbar*/
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar h1 {
+    color: var(--primary-color);
+}
+
+.navbar h1 a {
+    color: inherit;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    display: block;
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    width: 0;
+    height: 0.2rem;
+    background: var(--secondary-color);
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+.content {
+    height: 100vh;
+    padding-top: 6.48rem;
+}
+
+body div:nth-child(2) {
+    background: turquoise;
+}
+
+body div:nth-child(3) {
+    background: tomato;
+}
+
+body div:nth-child(4) {
+    background: violet;
+}
+
+body div:nth-child(5) {
+    background: goldenrod;
+}
+
+body div:nth-child(6) {
+    background: greenyellow;
+}
+
+body div:nth-child(7) {
+    background: rebeccapurple;
+}
+
+body div:nth-child(8) {
+    background: deeppink;
+}
+
+footer {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+footer p {
+    padding: 2rem;
+    color: var(--primary-color);
+}
