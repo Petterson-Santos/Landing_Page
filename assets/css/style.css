@@ -19,6 +19,8 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,6 +34,7 @@ h1, h2 {
 h2 {
     overflow: hidden; /*overflow error in h2 */
     margin-bottom: 5rem;
+    line-height: 1.2;
 }
 
 p {
@@ -73,6 +76,7 @@ a {
     right: 0;
     width: 100%;
     border: 1px solid var(--light-gray-color);
+    z-index: 1;
 }
 
 .menu h1 {
@@ -152,7 +156,6 @@ a {
     flex-flow: column nowrap;
     justify-content: center;
     text-align: center;
-    min-height: 100vw;
     max-width: 64rem;
 }
 
@@ -162,6 +165,86 @@ a {
 
 .intro-content p {
     font-size: 2rem;
+}
+
+.grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+    /* padding-top: 0;
+    padding-bottom: 0; */
+}
+
+.grid-description h2, .gallery-description h2 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.grid-description p, .grid-one-text p, .gallery-description p {
+    font-size: 2rem;
+}
+
+.grid-description p, .gallery-description {
+    padding-bottom: 5rem;
+    margin-bottom: 3rem;
+}
+
+.grid-one {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.grid-one-text {
+    position: relative;
+}
+
+.grid-one-text h3 {
+    font-size: 3rem;
+    padding: 0 0 2rem 5rem;
+}
+
+.grid-one-text p {
+    text-align: justify;
+}
+
+.grid-one-text h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
+}
+
+.gallery-description p {
+    margin-bottom: 0;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img {
+    width: 36rem;
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
 
 .section {
@@ -176,4 +259,5 @@ footer {
 footer p {
     padding: 2rem;
     color: var(--primary-color);
+    margin-bottom: 0;
 }
