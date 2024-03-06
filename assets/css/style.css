@@ -118,7 +118,7 @@ a {
 
 .grid-zero {
     display: grid;
-    grid-template-areas: 'text img';
+    grid-template-areas: 'text img, form form';
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
     min-height: 100vh;
@@ -151,7 +151,11 @@ a {
     height: auto;
 }
 
-.intro-content {
+.contact-form {
+    grid-area: 'form';
+}
+
+.intro-content, .responsive-table {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -245,6 +249,37 @@ a {
 
 .gallery-img img:hover {
     transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.responsive-table caption {
+    text-align: start;
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.responsive-table table {
+    border-collapse: collapse;
+}
+
+.responsive-table thead, .responsive-table tfoot {
+    background: var(--light-gray-color);
+}
+
+.responsive-table thead th {
+    border: none;
+}
+
+.responsive-table th, .responsive-table td {
+    padding: 1rem;
+}
+
+.responsive-table td {
+    border: 1px solid var(--light-gray-color);
+}
+
+.form-grid {
+    border: none;
 }
 
 .section {
