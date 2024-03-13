@@ -8,11 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;family=Open+Sans:ital,wght@0,400;0,700;1,400&amp;display=swap&amp;_cacheOverride=1708704537098" rel="stylesheet">
 </head>
 <body>
+    <input type="checkbox" id="close-menu" class="close-menu" aria-label="Close menu" role="button">
+    <label for="close-menu" class="close-menu-label" title="close menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1><a href="#home">Logo</a></h1>
+            <h1 onclick="getElementById('close-menu').checked = false"><a href="#home">Logo</a></h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false">
                     <li><a href="#intro">intro</a></li>
                     <li><a href="#grid-one">grid-one</a></li>
                     <li><a href="#gallery">gallery</a></li>
@@ -205,5 +207,6 @@
     <footer class="white-bg">
         <p>Feito por Petterson Santos</p>
     </footer>
+    <a class="back-to-top" href="#">➤</a>
 </body>
 </html>
