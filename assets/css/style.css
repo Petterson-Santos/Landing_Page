@@ -12,6 +12,11 @@
     --gap: 3rem;
 }
 
+::placeholder {
+    color: var(--light-gray-color);
+    opacity: 1;
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -278,8 +283,64 @@ a {
     border: 1px solid var(--light-gray-color);
 }
 
-.form-grid {
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form .form-grid {
     border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-grid legend {
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+    outline: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    box-shadow: 0 0 10px 2px var(--secondary-color);
+}
+
+.form-group {
+    flex: 1 1 320px;
+}
+
+.form-group button {
+    padding: 1.5rem 2rem;
+    background: none;
+    color: var(--white-color);
+    font-size: 3rem;
+    border: 0.5rem solid var(--white-color);
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+    background: var(--light-gray-color);
+    border-color: var(--light-gray-color);
+    color: var(--primary-color);
+}
+
+body .full-width {
+    flex: 1 1 100%;
+    width: 100%;
 }
 
 .section {
